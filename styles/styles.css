@@ -26,10 +26,35 @@
   font-style: normal;
 }
 
-xp
+body {
+  background-color: #d741a7;
+}
+
+body h2, h1 {
+  font-family: "Gochi Hand", cursive;
+}
+
+body p {
+  font-family: "Fuzzy Bubbles", sans-serif;
+}
 
 /* header */
 
+header {
+
+}
+
+header h2 {
+  
+}
+
+header p {
+
+}
+
 /* main */
 
+nav {
+
+}
 /* footer */
