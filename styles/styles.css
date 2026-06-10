@@ -1,11 +1,11 @@
 /* body */
 
-    /* color pallet */
+    /* color pallet
 
     https://coolors.co/d741a7-faff81-6d1752-82c0cc-dec5e3
     #D741A7 , #FAFF81 , #6D1752 , #82C0CC , #DEC5E3
 
-    /* fonts */
+    fonts 
     main text
 .fuzzy-bubbles-regular {
   font-family: "Fuzzy Bubbles", sans-serif;
@@ -25,6 +25,7 @@
   font-weight: 400;
   font-style: normal;
 }
+  */
 
 body {
   background-color: #d741a7;
@@ -54,7 +55,9 @@ header p {
 
 /* main */
 
-nav {
-
+navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 /* footer */
