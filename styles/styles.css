@@ -1,104 +1,359 @@
-/* body */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Leckerli+One&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&family=Salsa&family=Sue+Ellen+Francisco&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Caveat:wght@400..700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Leckerli+One&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&family=Salsa&family=Sue+Ellen+Francisco&display=swap');
 
-    /* color pallet
-
-    https://coolors.co/d741a7-faff81-6d1752-82c0cc-dec5e3
-    #D741A7 , #FAFF81 , #6D1752 , #82C0CC , #DEC5E3
-
-    fonts 
-    main text
-.fuzzy-bubbles-regular {
-  font-family: "Fuzzy Bubbles", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.fuzzy-bubbles-bold {
-  font-family: "Fuzzy Bubbles", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-    Title Font
-.gochi-hand-regular {
-  font-family: "Gochi Hand", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-  */
+/* ---------------------------------------------------
+   GLOBAL STYLES
+--------------------------------------------------- */
 
 body {
-  background-color: #d741a7;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
 }
 
-body h2, h1 {
-  font-family: "Gochi Hand", cursive;
+h1, h2, h3 {
+  margin: 0;
 }
 
-body p {
-  font-family: "Fuzzy Bubbles", sans-serif;
+a {
+  text-decoration: none;
+  color: #000;
 }
 
-/* header */
+/* ---------------------------------------------------
+   NAVIGATION
+--------------------------------------------------- */
 
-header {
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #fff;
+  border-bottom: 2px solid #c3c3c3;
+}
 
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ---------------------------------------------------
+   HERO (INDEX PAGE)
+--------------------------------------------------- */
+
+.hero {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.hero h2 {
+  font-size: 4rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  width: 70%;
+  margin: 10px auto 0;
 }
 
 header h2 {
-  
+  font-family: 'Bitcount Grid Double', 'Times New Roman', Times, serif;
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 50px;
+  font-weight: 380;
 }
 
-header p {
+/* ---------------------------------------------------
+   INDEX PAGE MAIN LAYOUT
+--------------------------------------------------- */
 
-}
-
-/* main */
-
-nav {
+.container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  border: 2px solid black;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+/* LEFT SIDE */
+.left select {
+  padding: 8px;
+  border: 2px solid #000;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  width: 100%;
+  height: 160px;
+  background: #DEC5E3;
+  border: 2px solid #000;
+  border-radius: 12px;
+  position: relative;
+}
+
+.card::before {
+  content: "⋯";
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 1.4rem;
+}
+
+/* RIGHT SIDE FORM */
+.right h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.right form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.right input,
+.right select {
+  padding: 8px;
+  border: 2px solid #000;
+  background: #fff;
+}
+
+.right button {
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid #000;
+  background: #FAFF81;
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------
+   BOTTOM GALLERY (INDEX PAGE)
+--------------------------------------------------- */
+
+.gallery-section {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 2fr;
+  gap: 20px;
+}
+
+.small-card {
+  height: 140px;
+  background: #DEC5E3;
+  border: 2px solid #000;
+  border-radius: 12px;
+  position: relative;
+}
+
+.small-card::before {
+  content: "⋯";
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 1.4rem;
+}
+
+.large-card {
+  height: 300px;
+  background: #DEC5E3;
+  border: 2px solid #000;
+  border-radius: 12px;
+  position: relative;
+}
+
+.arrows {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  font-size: 2rem;
+}
+
+/* ---------------------------------------------------
+   MY PAGE
+--------------------------------------------------- */
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: 2px solid #000;
+  background: #fff;
+  cursor: pointer;
+}
+
+.new-post {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.new-post-btn {
+  padding: 10px 25px;
+  border: 2px solid #000;
+  background: #82C0CC;
+  cursor: pointer;
+}
+
+.myposts-section {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.myposts-section h3{
+  font-family: 'Bitcount Grid Double', 'Times New Roman', Times, serif;
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 50px;
+  font-weight: 380;
+}
+
+.myposts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* POST CARD (dynamic) */
+.post-card {
+  width: 100%;
+  height: 160px;
+  background: #DEC5E3;
+  border: 2px solid #000;
+  border-radius: 12px;
+  position: relative;
+}
+
+.post-card::before {
+  content: "⋯";
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 1.4rem;
+}
+
+.post-card::after {
+  content: "♡";
+  position: absolute;
+  top: 35px;
+  right: 12px;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* ---------------------------------------------------
+   ABOUT PAGE
+--------------------------------------------------- */
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+/* ---------------------------------------------------
+   FOOTER
+--------------------------------------------------- */
+
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  background: #fff;
+  border-top: 2px solid #c3c3c3;
+  margin-top: 40px;
+}
+
+.footer a {
+  margin: 0 10px;
+}
+
+
+/* post card */
+
+.post-card {
+  width: 100%;
+  height: 180px;
+  background: #DEC5E3;
+  border: 2px solid #000;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   padding: 10px;
 }
 
-nav h1 {
-  grid-column: 1 / 3;
-  align-content: center;
-  
+/* Placeholder image inside card */
+.post-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-nav ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column: 4/6;
-  justify-content: space-evenly;
-  list-style: none;
+/* Title + description */
+.post-card h4 {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  font-family: "Fuzzy Bubbles", sans-serif;
 }
 
-header  {
-  display: grid;
- justify-content: center;
+.post-card p {
+  margin: 3px 0 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
 }
 
-header h1 {
-  display: grid;
-  align-content: center;
+/* Three-dots menu (top-right) */
+.post-card::before {
+  content: "⋯";
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 1.4rem;
+  cursor: pointer;
 }
 
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 30px;
+/* Heart icon (optional) */
+.post-card::after {
+  content: "♡";
+  position: absolute;
+  top: 35px;
+  right: 12px;
+  font-size: 1.2rem;
+  opacity: 0.8;
 }
 
-main .left {
-  display: grid;
-  grid-column: 1/4;
-}
 
-main .right {
-  display: grid;
-  grid-column: 4/6;
-}
-/* footer */
+
+
